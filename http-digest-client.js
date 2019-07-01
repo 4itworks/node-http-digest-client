@@ -103,7 +103,7 @@ var HTTPDigest = function () {
     var params = {};
     for (var i = 0; i < length; i++) {
       var part = parts[i].match(/^\s*?([a-zA-Z0-0]+)="(.*)"\s*?$/);
-      if (part.length > 2) {
+      if (part && part.length > 2) {
         params[part[1]] = part[2];
       }
     }
